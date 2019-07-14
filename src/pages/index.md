@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
 title: Ian Mundy
-image: /img/dsc_0713.jpg
-subtitle: Developer, Reader, and Fan of All Things Cleveland
+image: /img/sake.jpg
+subtitle: Developer • Reader • Inconsistent Writer • Fan of All Things Cleveland
 ---
