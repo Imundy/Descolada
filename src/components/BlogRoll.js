@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div className="columns is-multiline">
@@ -15,7 +15,7 @@ class BlogRoll extends React.Component {
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
+                  post.frontmatter.featuredpost ? "is-featured" : ""
                 }`}
               >
                 <header>
@@ -24,9 +24,7 @@ class BlogRoll extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${
-                            post.title
-                          }`,
+                          alt: `featured image thumbnail for post ${post.title}`
                         }}
                       />
                     </div>
@@ -38,9 +36,9 @@ class BlogRoll extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                    <span className="blogroll-subtitle is-size-5 is-block">
+                      {post.frontmatter.date}&nbsp;&bull;&nbsp;
+                      {`${post.frontmatter.rating}/10`}
                     </span>
                   </p>
                 </header>
@@ -56,25 +54,25 @@ class BlogRoll extends React.Component {
             </div>
           ))}
       </div>
-    )
+    );
   }
 }
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
-export default () => (
+export default ({ type }) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "book-review" } } }
         ) {
           edges {
             node {
@@ -86,6 +84,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                rating
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
@@ -103,4 +102,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);

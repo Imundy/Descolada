@@ -1,30 +1,32 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
-export const BlogPostTemplate = ({
+export const BookReviewTemplate = ({
   content,
   contentComponent,
   description,
+  rating,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <p>{`${rating}/10`}</p>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -43,26 +45,28 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-BlogPostTemplate.propTypes = {
+BookReviewTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  rating: PropTypes.number,
+  helmet: PropTypes.object
+};
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const BookReview = ({ data }) => {
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <BlogPostTemplate
+      <BookReviewTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        rating={post.frontmatter.rating}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -76,19 +80,19 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
-BlogPost.propTypes = {
+BookReview.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BookReview;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BookReviewByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -97,7 +101,8 @@ export const pageQuery = graphql`
         title
         description
         tags
+        rating
       }
     }
   }
-`
+`;
