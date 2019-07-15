@@ -2,13 +2,13 @@ import React from "react";
 
 import Helmet from "react-helmet";
 import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
+import TechBlogRoll from "../../components/TechBlogRoll";
 
-export default class BookReviewIndexPage extends React.Component {
+export default class TechBlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Ian Mundy - Book Reviews" />
+        <Helmet title="Ian Mundy - Technical Blog" />
         <div
           className="full-width-image-container margin-top-0"
           style={{
@@ -25,13 +25,13 @@ export default class BookReviewIndexPage extends React.Component {
               padding: "1rem"
             }}
           >
-            Latest Book Reviews
+            Technical Blog
           </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <TechBlogRoll />
             </div>
           </div>
         </section>

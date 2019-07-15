@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
+import TechBlogRoll from "../components/TechBlogRoll";
 
 export const IndexPageTemplate = ({ image, title, subtitle }) => (
   <div>
@@ -64,11 +65,20 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
               <div className="content">
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
+                    Technical Blog
+                  </h3>
+                  <TechBlogRoll />
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn" to="/techBlog">
+                      Technical Blog
+                    </Link>
+                  </div>
+                  <h3 className="has-text-weight-semibold is-size-2">
                     The Writings
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/books">
+                    <Link className="btn" to="/bookReviews">
                       Books
                     </Link>
                   </div>
