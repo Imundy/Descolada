@@ -36,7 +36,7 @@ class TechBlogRoll extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span className="blogroll-subtitle is-size-5 is-block">
+                    <span className="blogroll-subtitle is-size-6 is-block">
                       {post.frontmatter.date}
                     </span>
                   </p>

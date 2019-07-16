@@ -1,11 +1,11 @@
 ---
-templateKey: blog-post
+templateKey: book-review
 title: Second Foundation by Isaac Asimov
 date: 2019-07-13T04:23:00.000Z
 description: >-
   The conclusion to the best science fiction series of all time! (as voted in
   1966 so the decision is final)
-featuredpost: true
+featuredpost: false
 featuredimage: /img/second-foundation.jpg
 tags:
   - scifi
@@ -14,6 +14,7 @@ tags:
   - Hugo
 rating: 8
 ---
+
 This series was once voted the greatest series of all time. Yes, this was a real Hugo award given out in 1966. Foundation beat out the likes of The Lord of the Rings, and Hugo stopped giving a best series award out until 2017. I guess Foundation just broke system.
 
 So is it? _The best series of all time?_
