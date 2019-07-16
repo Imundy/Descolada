@@ -5,7 +5,7 @@ date: 2019-07-13T04:23:00.000Z
 description: >-
   The conclusion to the best science fiction series of all time! (as voted in
   1966 so the decision is final)
-featuredpost: false
+featuredpost: true
 featuredimage: /img/second-foundation.jpg
 tags:
   - scifi
