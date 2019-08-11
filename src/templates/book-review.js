@@ -28,7 +28,7 @@ export const BookReviewTemplate = ({
             </h1>
             <p>{`${rating}/10`}</p>
             <p>{description}</p>
-            <PostContent content={content} />
+            <PostContent className="content" content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>

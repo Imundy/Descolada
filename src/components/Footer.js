@@ -11,7 +11,11 @@ const Footer = class extends React.Component {
     return (
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered">
-          <h1 claasName="footer-title">I am Footer</h1>
+          <h1 className="footer-title">
+            Our new song is an earthly song, a song of pilgrims and wayfarers
+            upon whom the Word of God has dawned to light their way.
+          </h1>
+          <h1 className="footer-title">-Dietrich Bonhoeffer</h1>
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">

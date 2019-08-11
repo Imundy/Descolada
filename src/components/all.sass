@@ -1,17 +1,22 @@
 @import "~bulma/sass/utilities/initial-variables"
-@import "navbar"
-@import "footer"
-@import "blogroll"
+@import "colors"
 
 // Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+$primary: $primary-red
+$primary-invert: $primary-tan
+// $body-background-color: $primary-red
+$content-heading-color: $black
+$body-color: $black
+$content-blockquote-border-left: 3px solid $primary-red
+$content-blockquote-background-color: $primary-red
+
+.index-image-below
+  height: 100px
+  width: 100%
+  margin-bottom: -80px
+  background: $primary-red
+  border-bottom: 5px solid #FF402B
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -64,12 +69,15 @@ $black: #2b2523
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: #CC3700
+    color: $primary-red
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px $primary-red
+    box-shadow: inset 0 0 0 2px $primary-red
     -webkit-transition: all .15s ease
     transition: all .15s ease
+    &:hover
+      background-color: $primary-red
+      color: $primary-tan
 
 .margin-top-0
   margin-top: 0 !important
@@ -91,9 +99,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $primary-tan
+$menu-item-active-background-color:	$primary-tan
+$menu-list-border-left: 1px solid $primary-tan
 $menu-label-color: $white-ter
 
 
@@ -142,3 +150,12 @@ $menu-label-color: $white-ter
     max-width: 70%;
     margin: 0 0 1em;
     
+
+@import "navbar"
+@import "footer"
+@import "blogroll"
+
+blockquote
+  border-left: 1px solid $primary-red
+  padding-left: 24px
+  margin-left: 0px

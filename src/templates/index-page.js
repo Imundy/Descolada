@@ -6,10 +6,12 @@ import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import TechBlogRoll from "../components/TechBlogRoll";
 
+// primary-red rgb: 175,44,29
+
 export const IndexPageTemplate = ({ image, title, subtitle }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image margin-top-0 index-image"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -32,12 +34,13 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
+              "rgba(255,231,204, 0.8) 0.5rem 0px 0px, rgba(255,231,204, 0.8) -0.5rem 0px 0px",
+            backgroundColor: "rgba(255,231,204, 0.8)",
+            color: "#AF2C1D",
             lineHeight: "1",
             padding: "0.25em",
-            width: "fit-content"
+            width: "fit-content",
+            "border-radius": "1px"
           }}
         >
           {title}
@@ -46,18 +49,20 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
+              "rgba(255,231,204, 0.8) 0.5rem 0px 0px, rgba(255,231,204, 0.8) -0.5rem 0px 0px",
+            backgroundColor: "rgba(255,231,204, 0.8)",
+            color: "#AF2C1D",
             lineHeight: "1",
-            padding: "0.25em"
+            padding: "0.25em",
+            "border-radius": "1px"
           }}
         >
           {subtitle}
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <div className="index-image-below"></div>
+    <section className="section section--gradient index-body">
       <div className="container">
         <div className="section">
           <div className="columns">
