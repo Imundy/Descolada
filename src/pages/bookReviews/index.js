@@ -16,15 +16,7 @@ export default class BookReviewIndexPage extends React.Component {
             backgroundPosition: "center"
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: "rgb(0, 0, 0, 0.5) 0.5rem 3px 3px",
-              backgroundColor: "#f40",
-              color: "white",
-              padding: "1rem"
-            }}
-          >
+          <h1 className="has-text-weight-bold is-size-1 blog-index-title">
             Latest Book Reviews
           </h1>
         </div>

@@ -13,6 +13,7 @@ tags:
   - Second Foundation
   - Hugo
 rating: 8
+featuredquote: Feet, for tens of thousands of years, had clogged and shuffled in the mud – and held down the minds which, for an equal time, had been fit for the companionship of the stars.
 ---
 
 This series was once voted the greatest series of all time. Yes, this was a real Hugo award given out in 1966. Foundation beat out the likes of The Lord of the Rings, and Hugo stopped giving a best series award out until 2017. I guess Foundation just broke system.

@@ -15,7 +15,9 @@ tags:
   - hugo
   - nebula
 rating: 8
+featuredquote: Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation.
 ---
+
 This book won a slew of awards when it was published in 1984, and I can see why. The read itself is an adventure. It's a book that never lets you settle. You never feel like you are on familiar ground. And while it's not the only book that imagines a digital world people plug in to, it is the skill with which it paints the picture that is so incredible.
 
 > Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation.

@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const BookReviewTemplate = ({
   content,
@@ -13,7 +14,9 @@ export const BookReviewTemplate = ({
   rating,
   tags,
   title,
-  helmet
+  helmet,
+  featuredImage,
+  featuredQuote
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -23,10 +26,30 @@ export const BookReviewTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{`${rating}/10`}</p>
+            <div className="blog-post-title-container">
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                {title}
+              </h1>
+              <div className="rating">
+                <span style={{ fontStyle: "italic" }}>{"My rating: "}</span>
+                {`${rating}/10`}
+              </div>
+            </div>
+            <div className="blog-post-image-container">
+              <div className="blog-post-image">
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: featuredImage,
+                    alt: title
+                  }}
+                />
+              </div>
+              <h4>
+                {featuredQuote.split("\\n").map((text, i) => (
+                  <span key={i}>{text}</span>
+                ))}
+              </h4>
+            </div>
             <p>{description}</p>
             <PostContent className="content" content={content} />
             {tags && tags.length ? (
@@ -54,7 +77,8 @@ BookReviewTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   rating: PropTypes.number,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
+  featuredImage: PropTypes.string
 };
 
 const BookReview = ({ data }) => {
@@ -67,6 +91,8 @@ const BookReview = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         rating={post.frontmatter.rating}
+        featuredImage={post.frontmatter.featuredimage}
+        featuredQuote={post.frontmatter.featuredquote}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -102,6 +128,14 @@ export const pageQuery = graphql`
         description
         tags
         rating
+        featuredquote
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,42 @@
+@import "colors"
+
+.blog-index-title
+  box-shadow: rgba(0, 0, 0, 0.5) 0.5rem 3px 3px
+  background-color: $primary-red
+  color: $primary-tan
+  padding: 1rem
+
+.blog-post-image
+  width: 300px;
+
+.blog-post-image-container
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  background-color: $black
+  padding: 20px
+  h4
+    flex-basis: 60%
+    color: $primary-tan
+    padding-left: 20px
+    white-space: pre-line
+
+    span
+      display: block
+      padding: 4px 0
+
+.rating
+  margin-bottom: 16px
+  margin-top: -8px
+  color: $primary-red
+  font-weight: 800
+
+.blog-post-title-container
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+
++mobile
+  .blog-post-title-container
+    display: block

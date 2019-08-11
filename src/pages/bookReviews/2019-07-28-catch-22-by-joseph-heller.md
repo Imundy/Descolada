@@ -14,7 +14,12 @@ tags:
   - classic literature
   - war novel
 rating: 10
+featuredquote: >-
+  "From now on I'm thinking only of me." \n
+  Major Danby replied indulgently with a superior smile: "But, Yossarian, suppose everyone felt that way." \n
+  "Then," said Yossarian, "I'd certainly be a damned fool to feel any other way, wouldn't I?”
 ---
+
 Catch-22 is another book that falls squarely into the "classic for a reason" bucket. It's witty and clever and funny and depressing and crushing. And it is the grace with which it balances all these elements that makes the book stand out.
 
 > What is a country? A country is a piece of land surrounded on all sides by boundaries, usually unnatural. Englishmen are dying for England, Americans are dying for America, Germans are dying for Germany, Russians are dying for Russia. There are now fifty or sixty countries fighting in this war. Surely so many countries can't all be worth dying for.
