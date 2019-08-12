@@ -6,8 +6,9 @@
   color: $primary-tan
   padding: 1rem
 
-.blog-post-image
-  width: 300px;
+.blog-post-description
+  font-style: italic
+  padding: 10px 0
 
 .blog-post-image-container
   display: flex
@@ -16,8 +17,10 @@
   align-items: center
   background-color: $black
   padding: 20px
+  margin-bottom: 20px
+  .blog-post-image
+    min-width: 50%
   h4
-    flex-basis: 60%
     color: $primary-tan
     padding-left: 20px
     white-space: pre-line
@@ -40,3 +43,11 @@
 +mobile
   .blog-post-title-container
     display: block
+
+  .blog-post-image-container
+    flex-direction: column
+    .blog-post-image
+      width: 100%
+    h4
+      font-size: 18px
+      padding-top: 20px

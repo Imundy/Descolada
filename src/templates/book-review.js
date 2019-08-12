@@ -35,6 +35,7 @@ export const BookReviewTemplate = ({
                 {`${rating}/10`}
               </div>
             </div>
+            <p className="blog-post-description">{description}</p>
             <div className="blog-post-image-container">
               <div className="blog-post-image">
                 <PreviewCompatibleImage
@@ -50,7 +51,6 @@ export const BookReviewTemplate = ({
                 ))}
               </h4>
             </div>
-            <p>{description}</p>
             <PostContent className="content" content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>

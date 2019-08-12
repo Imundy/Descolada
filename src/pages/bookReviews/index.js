@@ -17,7 +17,7 @@ export default class BookReviewIndexPage extends React.Component {
           }}
         >
           <h1 className="has-text-weight-bold is-size-1 blog-index-title">
-            Latest Book Reviews
+            Book Reviews
           </h1>
         </div>
         <section className="section">
