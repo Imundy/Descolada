@@ -10,21 +10,13 @@ export default class TechBlogIndexPage extends React.Component {
       <Layout>
         <Helmet title="Ian Mundy - Technical Blog" />
         <div
-          className="full-width-image-container margin-top-0"
+          className="full-width-image-container margin-top-0 tech-blog-cover-image"
           style={{
-            backgroundImage: `url('/img/second-foundation.jpg')`,
+            backgroundImage: `url('/img/audio-mixing-ios-cover.jpg')`,
             backgroundPosition: "center"
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: "rgb(0, 0, 0, 0.5) 0.5rem 3px 3px",
-              backgroundColor: "#f40",
-              color: "white",
-              padding: "1rem"
-            }}
-          >
+          <h1 className="has-text-weight-bold is-size-1 blog-index-title">
             Technical Blog
           </h1>
         </div>

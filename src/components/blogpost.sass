@@ -6,6 +6,10 @@
   color: $primary-tan
   padding: 1rem
 
+.tech-blog-cover-image
+  box-sizing: content-box
+  border-bottom: 20px solid $primary-red
+
 .blog-post-description
   font-style: italic
   padding: 10px 0
@@ -39,6 +43,16 @@
   display: flex
   justify-content: space-between
   align-items: baseline
+
+.content
+  p, li, ul
+    code
+      display: inline
+      width: auto
+
+.content code
+  width: 100%
+  display: flex
 
 +mobile
   .blog-post-title-container
