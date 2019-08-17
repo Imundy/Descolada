@@ -5,13 +5,13 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class TechBlogRoll extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, limit } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }) => (
+          posts.slice(0, limit || 1000).map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
@@ -65,7 +65,7 @@ TechBlogRoll.propTypes = {
   })
 };
 
-export default ({ type }) => (
+export default ({ limit }) => (
   <StaticQuery
     query={graphql`
       query TechBlogRollQuery {
@@ -98,6 +98,8 @@ export default ({ type }) => (
         }
       }
     `}
-    render={(data, count) => <TechBlogRoll data={data} count={count} />}
+    render={(data, count) => (
+      <TechBlogRoll data={data} count={count} limit={limit} />
+    )}
   />
 );

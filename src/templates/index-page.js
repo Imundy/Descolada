@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
                   <h3 className="has-text-weight-semibold is-size-2">
                     Technical Blog
                   </h3>
-                  <TechBlogRoll />
+                  <TechBlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/techBlog">
                       Technical Blog
@@ -81,7 +81,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
                   <h3 className="has-text-weight-semibold is-size-2">
                     Book Reviews
                   </h3>
-                  <BlogRoll />
+                  <BlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/bookReviews">
                       Books
