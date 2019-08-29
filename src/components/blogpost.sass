@@ -1,12 +1,29 @@
 @import "colors"
 
+.top-10-books
+  border-top: 1px solid $primary-tan
+  border-bottom: 1px solid $primary-tan
+  padding: 1rem 0
+  margin: -1rem auto
+
+  li
+    display: inline-block;
+    font-weight: 800;
+    font-size: 18px;
+    &:not(:last-child)
+      &:after
+        content: "●"
+        color: $primary-red
+        font-size: 12px
+        padding: 1rem
+
 .blog-index-title
   box-shadow: rgba(0, 0, 0, 0.5) 0.5rem 3px 3px
   background-color: $primary-red
   color: $primary-tan
   padding: 1rem
 
-.tech-blog-cover-image
+.tech-blog-cover-image, .book-review-cover-image
   box-sizing: content-box
   border-bottom: 20px solid $primary-red
 
@@ -57,6 +74,13 @@
 +mobile
   .blog-post-title-container
     display: block
+
+  .blog-index-title
+    box-shadow: rgba(0, 0, 0, 0.5) 0.5rem 3px 3px
+    background-color: rgba(255,231,204, 0.8)
+    color: $primary-red
+    padding: 0.5
+    font-size: 2rem !important
 
   .blog-post-image-container
     flex-direction: column
