@@ -1,7 +1,7 @@
 ---
 templateKey: book-review
 title: The Worm Ouroboros by E.R. Eddison
-date: 2019-10-09T04:18:10.652Z
+date: 2019-09-29T04:18:10.652Z
 description: >-
   The forerunner of the modern fantasy epics. E.R. Eddison builds a world of
   heroes whose tales of valor are famous among the world's nations. A world of
