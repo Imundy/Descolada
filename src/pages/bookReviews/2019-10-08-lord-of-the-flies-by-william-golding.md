@@ -1,7 +1,7 @@
 ---
 templateKey: book-review
 title: Lord of the Flies by William Golding
-date: 2019-10-09T04:00:16.483Z
+date: 2019-09-23T04:00:16.483Z
 description: >-
   A bunch of young boys get stranded on an island. How could this possibly go
   wrong?
