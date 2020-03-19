@@ -1,7 +1,7 @@
 ---
 templateKey: book-review
 title: Snow Crash by Neal Stephenson
-date: 2020-03-19T04:36:05.332Z
+date: 2019-10-27T04:36:00.000Z
 description: >-
   Welcome to the corporate future where everything down to your suburban
   neighborhood is owned and operated by some private company. And in the middle
