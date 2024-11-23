@@ -40,7 +40,8 @@ export default class Index extends React.Component {
           <div className="container">
             <div className="content">
               <h1>Contact</h1>
-              <div>I can always be reached by sending an email to me@ianmundy.com</div>
+              <p>Please send mme an email if you would like to connect on any of my work as a technical lead in Google Payments or current legal research. I am especially happy to discuss career growth, effective engineering teams, and what it looks like to make a career change after you're already established in a role.</p>
+              <p>I can always be reached by sending an email to <a href='mailto:me@ianmundy.com'>me@ianmundy.com</a></p>
             </div>
           </div>
         </section>
