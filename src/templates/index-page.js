@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `0px -120px`,
         backgroundAttachment: `fixed`
       }}
     >
@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
             boxShadow:
               "rgba(255,231,204, 0.8) 0.5rem 0px 0px, rgba(255,231,204, 0.8) -0.5rem 0px 0px",
             backgroundColor: "rgba(255,231,204, 0.8)",
-            color: "#AF2C1D",
+            color: "#0F0B66",
             lineHeight: "1",
             padding: "0.25em",
             width: "fit-content",
@@ -51,7 +51,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
             boxShadow:
               "rgba(255,231,204, 0.8) 0.5rem 0px 0px, rgba(255,231,204, 0.8) -0.5rem 0px 0px",
             backgroundColor: "rgba(255,231,204, 0.8)",
-            color: "#AF2C1D",
+            color: "#0F0B66",
             lineHeight: "1",
             padding: "0.25em",
             "border-radius": "1px"
@@ -72,6 +72,7 @@ export const IndexPageTemplate = ({ image, title, subtitle }) => (
                   <h3 className="has-text-weight-semibold is-size-2">
                     Technical Blog
                   </h3>
+                  <h4>Find my technical posts on <a href="https://medium.com/@ian.mundy">Medium</a> as well.</h4>
                   <TechBlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/techBlog">
